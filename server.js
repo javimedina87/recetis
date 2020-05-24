@@ -1,17 +1,27 @@
 const express = require('express');
+const http = require('http');
 const path = require('path');
+const reload = require('reload');
+// const bodyParser = require('body-parser');
+// const logger = require('morgan');
+
 const app = express();
 
-// Heroku var to get a port number
-const PORT = process.env.PORT || 5000
+const publicDir = path.join(__dirname, 'public'); // public directory
 
-// CSS
-app.use(express.static(__dirname + '/public'));
+app.set('port', process.env.PORT || 3000);
+// app.use(logger('dev')); // TODO estudiarlo
+// app.use(bodyParser.json()); // parses json, multi-part (file), url-encoded
 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+app.get('/', function (req, res) {
+	res.sendFile(path.join(publicDir, 'index.html')); // start with index.thml
 });
 
-app.listen(PORT, function () {
-    console.log('Example app listening on port: ', PORT);
+// Reload dependency code
+reload(app).then(function () {
+	http.createServer(app).listen(app.get('port'), function () {
+		console.log('Server listening on port ' + app.get('port'));
+	});
+}).catch(function (err) {
+	console.error('Reload could not start server', err);
 });
