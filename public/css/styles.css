@@ -28,14 +28,14 @@ body {
     color: var(--main-background-color);
     display: flex;
     flex: 1;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
     justify-content: center;
 }
 
 /* Hat logo */
 .chef-hat {
-    padding-left: 10px;
+    padding: 10px 0 10px 10px;
     width: 20%;
 }
 
