@@ -3,7 +3,6 @@ const precacheResources = [
 	'/',
 	'index.html',
 	'css/styles.css',
-	'images/backgroundHeader.jpg',
 ];
 
 self.addEventListener('install', (event) => {

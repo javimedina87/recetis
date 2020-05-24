@@ -13,50 +13,44 @@
 	<meta name="msapplication-navbutton-color" content="orange">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="msapplication-starturl" content="/index.html">
+
 	<title>Recetas</title>
+
 	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 	<link rel="manifest" href="manifest.json">
+	<link rel="apple-touch-icon" sizes="128x128" href="images/touch/icon-128x128.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/touch/icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="images/touch/icon-192x192.png">
+	<link rel="apple-touch-icon" sizes="256x256" href="images/touch/icon-256x256.png">
+	<link rel="apple-touch-icon" sizes="384x384" href="images/touch/icon-384x384.png">
+	<link rel="apple-touch-icon" sizes="512x512" href="images/touch/icon-512x512.png">
 </head>
 <body>
 
-<!--	Primera fila-->
-	<div class="gorritoParent">
-		<img class="gorritoChildren" src="images/gorrito.png" alt="">
+	<!--Banner (logo and header)-->
+	<div class="banner">
+		<img class="chef-hat" src="images/chef-hat.png" alt="">
+		<span class="header">Recetis para tod@s</span>
 	</div>
 
-
-<!--    Segunda fila-->
-	<div class="second-row">
-
-<!--		Primera columna de la segunda fila-->
-		<div>
-			<h1>Título de la web recetas</h1>
-		</div>
-
-<!--		Segunda columna de la segunda fila-->
-		<div class="another-box-item">
-			<span>hellosss</span>
-		</div>
-
+	<!--Container (all app content except banner)-->
+	<div class="container">
+		<h3>Ideas</h3>
+		<ul>
+			<li>Añadir nueva receta</li>
+			<li>Top ranking</li>
+			<li>Imágenes de recetas</li>
+			<li>Últimas recetas añadidas</li>
+			<li>Imagen inicial con "Postre" y otra con "Platos"</li>
+			<li>Pasos a seguir una vez se escoge una receta</li>
+			<li>Cuando estas siguiendo los pasos de la receta... darle a un botón y que sea "siguiente paso". También un desplegable con los ingredientes</li>
+			<li>Puntuación y color de fondo de la receta</li>
+		</ul>
 	</div>
 
-<h2>Ideas</h2>
-<ul>
-	<li>Añadir nueva receta</li>
-	<li>Top ranking</li>
-	<li>Imágenes de recetas</li>
-	<li>Últimas recetas añadidas</li>
-	<li>Imagen inicial con "Postre" y otra con "Platos"</li>
-	<li>Pasos a seguir una vez se escoge una receta</li>
-	<li>Cuando estas siguiendo los pasos de la receta... darle a un botón y que sea "siguiente paso". También un desplegable con los ingredientes</li>
-	<li>Puntuación y color de fondo de la receta</li>
-</ul>
-
-
-
-
-
-<!-- 	<script>
+	<!--Scripts para Progressive Web Apps (Service Workers)-->
+ 	<script>
 		if ('serviceWorker' in navigator) {
 			window.addEventListener('load', function() {
 				navigator.serviceWorker.register('service-worker-recetas.js')
@@ -68,8 +62,8 @@
 				});
 			});
 		}
-	 </script> -->
-<!-- 	<script>
+	 </script>
+ 	<script>
 		let deferredPrompt;
 		window.addEventListener('beforeinstallprompt', event => {
 
@@ -100,7 +94,7 @@
 			// Update UI notify the user they can add to home screen
 			document.querySelector('#installBanner').style.display = 'flex';
 		});
-	</script> -->
+	</script>
 	<script src="/reload/reload.js"></script>
 </body>
 </html>

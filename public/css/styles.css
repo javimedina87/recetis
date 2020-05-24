@@ -1,50 +1,44 @@
+/* Default vars */
 :root {
-    --variable-de-andrea: green;
+    --main-background-color: cornflowerblue;
+    --main-font-size: 20px;
+    /*--main-font-color: black;*/
 }
 
 body {
     align-items: stretch;
-    background: var(--variable-de-andrea);
+    background: var(--main-background-color);
     display: flex;
     flex-direction: column;
+    font-size: var(--main-font-size);
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
-.gorritoParent {
-    background: white;
+.banner {
+    background: lightblue;
     display: flex;
     justify-content: flex-start;
 }
 
-.gorritoChildren {
-    background: none;
-    width: 25%;
-}
-
-.second-row {
-    align-items: stretch;
-    background: var(--variable-de-andrea);
-    display: flex;
-    justify-content: center;
-}
-
-.another-box-item {
+/* Style only for header class inside banner class */
+.banner .header {
     align-items: center;
-    background: bisque;
-    border: 1px solid red;
+    color: var(--main-background-color);
     display: flex;
     flex: 1;
+    font-size: 36px;
+    font-weight: bold;
     justify-content: center;
 }
 
-.third-row {
-    border: 2px solid pink;
-    display: flex;
+/* Hat logo */
+.chef-hat {
+    padding-left: 10px;
+    width: 20%;
 }
 
-.third-row-children {
-    border: 1px solid orange;
-    display: flex;
-    flex: 1;
-    padding: 20px;
+.container {
+    padding: 10px;
 }
