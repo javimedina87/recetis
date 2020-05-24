@@ -14,7 +14,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "./node_modules/.bin/supervisor -k -e html -i .git/,node_modules/ -- server.js"
+    "start": "./node_modules/.bin/supervisor -k -e html,css -i .git/,node_modules/ -- server.js"
   },
   "devDependencies": {
     "eslint": "^7.1.0",

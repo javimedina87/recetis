@@ -1,0 +1,57 @@
+:root {
+    --main-background-color: #629ae8;
+}
+
+body {
+    align-items: stretch;
+    background: var(--main-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div#installBanner {
+    align-items: center;
+    background: mediumpurple;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+#installBtn {
+    color: orangered;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.button-recetas {
+    align-items: center;
+    border: 3px solid darkblue;
+    background: mediumaquamarine;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 6px;
+}
+
+.second-row {
+    align-items: stretch;
+    background: var(--main-background-color);
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background: mediumpurple;
+    flex: 1;
+}
+
+.another-box-item {
+    align-items: center;
+    background: bisque;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}

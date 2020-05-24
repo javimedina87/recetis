@@ -1,8 +1,0 @@
-table, th, td {
-    border: 1px solid black;
-}
-
-header {
-    background-image: url(/images/backgroundHeader.jpg);
-    background-repeat: no-repeat;
-}
