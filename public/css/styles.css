@@ -1,13 +1,13 @@
 /* Default vars */
 :root {
-    --main-background-color: cornflowerblue;
+    --main-blue-color: cornflowerblue;
     --main-font-size: 20px;
     /*--main-font-color: black;*/
 }
 
 body {
     align-items: stretch;
-    background: var(--main-background-color);
+    background: var(--main-blue-color);
     display: flex;
     flex-direction: column;
     font-size: var(--main-font-size);
@@ -25,7 +25,7 @@ body {
 /* Style only for header class inside banner class */
 .banner .header {
     align-items: center;
-    color: var(--main-background-color);
+    color: var(--main-blue-color);
     display: flex;
     flex: 1;
     font-size: 28px;
@@ -35,7 +35,7 @@ body {
 
 /* Hat logo */
 .chef-hat {
-    padding: 10px 0 10px 10px;
+    margin-left: 10px;
     width: 20%;
 }
 
