@@ -18,22 +18,44 @@
 	<link rel="manifest" href="manifest.json">
 </head>
 <body>
-	<div id="installBanner">
-		<span id="installBtn" class="button-recetas">Instalar App Recetas</span>
+
+<!--	Primera fila-->
+	<div class="gorritoParent">
+		<img class="gorritoChildren" src="images/gorrito.png" alt="">
 	</div>
-	
+
+
+<!--    Segunda fila-->
 	<div class="second-row">
-		<header>
+
+<!--		Primera columna de la segunda fila-->
+		<div>
 			<h1>Título de la web recetas</h1>
-		</header>
-		
+		</div>
+
+<!--		Segunda columna de la segunda fila-->
 		<div class="another-box-item">
 			<span>hellosss</span>
 		</div>
+
 	</div>
-	
-	
-	
+
+<h2>Ideas</h2>
+<ul>
+	<li>Añadir nueva receta</li>
+	<li>Top ranking</li>
+	<li>Imágenes de recetas</li>
+	<li>Últimas recetas añadidas</li>
+	<li>Imagen inicial con "Postre" y otra con "Platos"</li>
+	<li>Pasos a seguir una vez se escoge una receta</li>
+	<li>Cuando estas siguiendo los pasos de la receta... darle a un botón y que sea "siguiente paso". También un desplegable con los ingredientes</li>
+	<li>Puntuación y color de fondo de la receta</li>
+</ul>
+
+
+
+
+
 <!-- 	<script>
 		if ('serviceWorker' in navigator) {
 			window.addEventListener('load', function() {
@@ -50,19 +72,19 @@
 <!-- 	<script>
 		let deferredPrompt;
 		window.addEventListener('beforeinstallprompt', event => {
-			
+
 			// Prevent Chrome 67 and earlier from automatically showing the prompt
 			event.preventDefault();
-			
+
 			// Stash the event so it can be triggered later.
 			deferredPrompt = event;
-			
+
 			// Attach the install prompt to a user gesture
 			document.querySelector('#installBtn').addEventListener('click', event => {
-				
+
 				// Show the prompt
 				deferredPrompt.prompt();
-				
+
 				// Wait for the user to respond to the prompt
 				deferredPrompt.userChoice
 				.then((choiceResult) => {
@@ -74,7 +96,7 @@
 					deferredPrompt = null;
 				});
 			});
-			
+
 			// Update UI notify the user they can add to home screen
 			document.querySelector('#installBanner').style.display = 'flex';
 		});
