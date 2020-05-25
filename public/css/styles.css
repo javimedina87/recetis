@@ -35,6 +35,7 @@ body {
 
 /* Hat logo */
 .chef-hat {
+    align-self: center;
     margin-right: var(--1vh-1vw);
     width: calc(14vw);
 }
