@@ -1,7 +1,7 @@
 /* Default vars */
 :root {
     --main-blue-color: cornflowerblue;
-    --main-font-size: 20px;
+    --main-font-size: 5vw;
     --1vh-1vw: calc(1vh + 1vw); /* height and width. For responsive design, do no use Pixels */
     /*--main-font-color: black;*/
 }
@@ -24,22 +24,23 @@ body {
     padding: var(--1vh-1vw);
 }
 
-/* Style only for header class inside banner class */
-.banner .header {
+/* Style only for header-text class belonging to banner class */
+.banner .header-text {
     align-items: center;
     color: var(--main-blue-color);
     display: flex;
     flex: 1;
-    font-size: calc(3vh + 3vw);
+    font-size: 8vw;
     font-weight: bold;
     justify-content: center;
 }
 
 /* Hat logo */
 .chef-hat {
-    width: calc(6vh + 6vw);
+    margin-right: var(--1vh-1vw);
+    width: calc(14vw);
 }
 
 .container {
-    padding: 10px;
+    padding: var(--1vh-1vw);
 }
