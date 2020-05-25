@@ -7,12 +7,10 @@
 }
 
 body {
-    align-items: stretch;
     background: var(--main-blue-color);
     display: flex;
     flex-direction: column;
     font-size: var(--main-font-size);
-    justify-content: center;
     margin: 0;
     padding: 0;
 }
