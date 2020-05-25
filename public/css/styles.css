@@ -2,6 +2,7 @@
 :root {
     --main-blue-color: cornflowerblue;
     --main-font-size: 20px;
+    --1vh-1vw: calc(1vh + 1vw); /* height and width. For responsive design, do no use Pixels */
     /*--main-font-color: black;*/
 }
 
@@ -20,6 +21,7 @@ body {
     background: lightblue;
     display: flex;
     justify-content: flex-start;
+    padding: var(--1vh-1vw);
 }
 
 /* Style only for header class inside banner class */
@@ -28,15 +30,14 @@ body {
     color: var(--main-blue-color);
     display: flex;
     flex: 1;
-    font-size: 28px;
+    font-size: calc(3vh + 3vw);
     font-weight: bold;
     justify-content: center;
 }
 
 /* Hat logo */
 .chef-hat {
-    margin-left: 10px;
-    width: 20%;
+    width: calc(6vh + 6vw);
 }
 
 .container {
