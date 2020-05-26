@@ -18,7 +18,7 @@ function App() {
 				<ul>
 					<li>Añadir nueva receta</li>
 					<li>Top ranking</li>
-					<li>Imágenes de recetas</li>
+					<li>Imágenes</li>
 					<li>Últimas recetas añadidas</li>
 					<li>Imagen inicial con "Postre" y otra con "Platos"</li>
 					<li>Pasos a seguir una vez se escoge una receta</li>
