@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Banner = (props) => {
 	return (
 		<header className="banner">
-			<img className="egg" src={`${process.env.PUBLIC_URL}/${props.imageName}`} alt="" />
+			<img className="egg rotate-image" src={`${process.env.PUBLIC_URL}/${props.imageName}`} alt="" />
 			<span className="header-text">{props.text}</span>
 		</header>
 	)

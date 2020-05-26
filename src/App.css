@@ -1,6 +1,6 @@
 :root {
   --main-blue-color: lightskyblue;
-  --main-font-size: 5vw;
+  --main-font-size: 4vmin;
   --1vh-1vw: calc(1vh + 1vw); /* height and width. For responsive design, do no use Pixels */
 }
 
@@ -40,6 +40,10 @@ body {
   align-self: center; /* Avoid to expand image */
   margin-right: var(--1vh-1vw);
   width: calc(14vw);
+}
+
+.list-items {
+
 }
 
 /* Image rotation */
