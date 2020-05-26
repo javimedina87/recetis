@@ -20,6 +20,6 @@
   ],
   "name": "Recetis para tod@s",
   "short_name": "Recetis",
-  "start_url": "/index.html",
+  "start_url": ".index",
   "theme_color": "blue"
 }
