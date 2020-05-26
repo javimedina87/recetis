@@ -1,100 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta name="viewport"
-	content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 shrink-to-fit=no">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="application-name" content="Recetas name">
-	<meta name="apple-mobile-web-app-title" content="Recetas">
-	<meta name="theme-color" content="red">
-	<meta name="msapplication-navbutton-color" content="orange">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="msapplication-starturl" content="/index.html">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Recetas">
+    <meta name="application-name" content="Recetas name">
+    <meta name="description" content="Web site created using create-react-app"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-navbutton-color" content="orange">
+    <meta name="msapplication-starturl" content="/index.html">
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>Recetas</title>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/egg192.png" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
-	<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-	<link rel="manifest" href="manifest.json">
-	<link rel="apple-touch-icon" sizes="128x128" href="images/touch/icon-128x128.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="images/touch/icon-180x180.png">
-	<link rel="apple-touch-icon" sizes="192x192" href="images/touch/icon-192x192.png">
-	<link rel="apple-touch-icon" sizes="256x256" href="images/touch/icon-256x256.png">
-	<link rel="apple-touch-icon" sizes="384x384" href="images/touch/icon-384x384.png">
-	<link rel="apple-touch-icon" sizes="512x512" href="images/touch/icon-512x512.png">
-</head>
-<body>
+    <!--<link rel="apple-touch-icon" sizes="128x128" href="images/touch/icon-128x128.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/touch/icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="images/touch/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="images/touch/icon-256x256.png">
+    <link rel="apple-touch-icon" sizes="384x384" href="images/touch/icon-384x384.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="images/touch/icon-512x512.png">-->
 
-	<!--Banner (logo and header)-->
-	<div class="banner">
-		<img class="chef-hat" src="images/chef-hat.png" alt="">
-		<span class="header-text">Recetis para tod@s</span>
-	</div>
-
-	<!--Container (all app content except banner)-->
-	<div class="container">
-		<h3>Ideas</h3>
-		<ul>
-			<li>Añadir nueva receta</li>
-			<li>Top ranking</li>
-			<li>Imágenes de recetas</li>
-			<li>Últimas recetas añadidas</li>
-			<li>Imagen inicial con "Postre" y otra con "Platos"</li>
-			<li>Pasos a seguir una vez se escoge una receta</li>
-			<li>Cuando estas siguiendo los pasos de la receta... darle a un botón y que sea "siguiente paso". También un desplegable con los ingredientes</li>
-			<li>Puntuación y color de fondo de la receta</li>
-		</ul>
-	</div>
-
-	<!--Scripts para Progressive Web Apps (Service Workers)-->
-<!-- 	<script>-->
-<!--		if ('serviceWorker' in navigator) {-->
-<!--			window.addEventListener('load', function() {-->
-<!--				navigator.serviceWorker.register('service-worker-recetas.js')-->
-<!--				.then(reg => {-->
-<!--					console.log('Service worker recetas registered! 😎', reg);-->
-<!--				})-->
-<!--				.catch(err => {-->
-<!--					console.log('😥 Service worker recetas registration failed: ', err);-->
-<!--				});-->
-<!--			});-->
-<!--		}-->
-<!--	 </script>-->
-<!-- 	<script>-->
-<!--		let deferredPrompt;-->
-<!--		window.addEventListener('beforeinstallprompt', event => {-->
-
-<!--			// Prevent Chrome 67 and earlier from automatically showing the prompt-->
-<!--			event.preventDefault();-->
-
-<!--			// Stash the event so it can be triggered later.-->
-<!--			deferredPrompt = event;-->
-
-<!--			// Attach the install prompt to a user gesture-->
-<!--			document.querySelector('#installBtn').addEventListener('click', event => {-->
-
-<!--				// Show the prompt-->
-<!--				deferredPrompt.prompt();-->
-
-<!--				// Wait for the user to respond to the prompt-->
-<!--				deferredPrompt.userChoice-->
-<!--				.then((choiceResult) => {-->
-<!--					if (choiceResult.outcome === 'accepted') {-->
-<!--						console.log('User accepted the A2HS prompt');-->
-<!--					} else {-->
-<!--						console.log('User dismissed the A2HS prompt');-->
-<!--					}-->
-<!--					deferredPrompt = null;-->
-<!--				});-->
-<!--			});-->
-
-<!--			// Update UI notify the user they can add to home screen-->
-<!--			document.querySelector('#installBanner').style.display = 'flex';-->
-<!--		});-->
-<!--	</script>-->
-	<script src="/reload/reload.js"></script>
-</body>
+    <title>Recetis</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>

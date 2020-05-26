@@ -1,31 +1,25 @@
 {
-  "name": "Recetas",
-  "short_name": "Recetis",
-  "lang": "en-US",
-  "start_url": "/index.html",
+  "background_color": "red",
   "display": "standalone",
-  "theme_color": "blue",
-  "background_color": "purple",
   "icons": [
     {
-      "src": "images/touch/icon-128x128.png",
-      "sizes": "128x128"
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
     },
     {
-      "src": "images/touch/icon-192x192.png",
+      "src": "egg192.png",
+      "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "images/touch/icon-256x256.png",
-      "sizes": "256x256"
-    },
-    {
-      "src": "images/touch/icon-384x384.png",
-      "sizes": "384x384"
-    },
-    {
-      "src": "images/touch/icon-512x512.png",
+      "src": "egg512.png",
+      "type": "image/png",
       "sizes": "512x512"
     }
-  ]
+  ],
+  "name": "Recetis para tod@s",
+  "short_name": "Recetis",
+  "start_url": ".",
+  "theme_color": "blue"
 }

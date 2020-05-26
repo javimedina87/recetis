@@ -1,0 +1,65 @@
+:root {
+  --main-blue-color: lightskyblue;
+  --main-font-size: 5vw;
+  --1vh-1vw: calc(1vh + 1vw); /* height and width. For responsive design, do no use Pixels */
+}
+
+.banner {
+  background: deepskyblue;
+  display: flex;
+  justify-content: flex-start;
+  padding: var(--1vh-1vw);
+}
+
+/* Style only for header-text class belonging to banner class */
+.banner .header-text {
+  align-items: center;
+  color: whitesmoke;
+  display: flex;
+  flex: 1;
+  font-size: 8vw;
+  font-weight: bold;
+  justify-content: center;
+}
+
+body {
+  background: var(--main-blue-color);
+  display: flex;
+  flex-direction: column;
+  font-size: var(--main-font-size);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: var(--1vh-1vw);
+}
+
+/* Egg logo */
+.egg {
+  align-self: center; /* Avoid to expand image */
+  margin-right: var(--1vh-1vw);
+  width: calc(14vw);
+}
+
+/* Image rotation */
+.rotate-image {
+  pointer-events: none;
+}
+
+/* Rotation degrees */
+@keyframes rotate-image-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Rotation animation (speed)*/
+@media (prefers-reduced-motion: no-preference) {
+  .rotate-image {
+    animation: rotate-image-spin infinite 15s linear;
+  }
+}
