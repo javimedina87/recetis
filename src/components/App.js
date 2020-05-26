@@ -14,7 +14,7 @@ function App() {
 
 				<h3>App migrada a React</h3>
 
-				<h5>Ideas</h5>
+				<h5>Ideas ;)</h5>
 				<ul>
 					<li>Añadir nueva receta</li>
 					<li>Top ranking</li>
