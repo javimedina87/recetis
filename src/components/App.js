@@ -53,13 +53,13 @@ function App() {
 
 			{/*Container (all app content except banner)*/}
 			<div className='container'>
+				<AddRecipeForm />
+
 				<div className='recipe-list-box'>
 					<p><b>Listado de Recetas</b></p>
 					<ListRecipes items={recipes}/>
 					<button onClick={updateRecipes}>Actualizar recetas</button>
 				</div>
-
-				<AddRecipeForm />
 
 				<div className='work-in-progress-container'>
 					<b>Listado de ideas</b>
