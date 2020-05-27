@@ -4,6 +4,12 @@
   --1vh-1vw: calc(1vh + 1vw); /* height and width. For responsive design, do no use Pixels */
 }
 
+input[type='text'],
+input[type='number'],
+textarea {
+  font-size: 16px;
+}
+
 .banner {
   background: deepskyblue;
   display: flex;
