@@ -42,13 +42,59 @@ body {
   width: calc(14vw);
 }
 
-.list-items {
+.add-recipe-container {
+  border: 3px dashed coral;
+  margin-top: 4vmin;
+  padding: 2vmin;
+}
 
+.recipe-list-box {
+  border: 3px dashed green;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4vmin;
+  padding: 2vmin;
+}
+
+.recipe-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 3vmin;
+  margin-bottom: 3vmin;
+}
+
+.work-in-progress-container {
+  border: 3px dashed yellow;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4vmin;
+  padding: 2vmin;
 }
 
 /* Image rotation */
 .rotate-image {
   pointer-events: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form .input-error {
+  color: red;
+  font-size: 3vmin;
+  font-weight: bold;
+}
+
+button, input {
+  margin: 2vmin 0 2vmin 0;
+  padding: 2vmin;
+}
+
+button {
+  background: cornflowerblue;
+  border: 1vmin solid royalblue;
 }
 
 /* Rotation degrees */

@@ -1,58 +1,74 @@
 import React, { useEffect, useState } from 'react';
+import AddRecipeForm from './AddRecipeForm';
 import Banner from './Banner';
 import ListItems from './ListItems';
+import ListRecipes from './ListRecipes';
 import SmartButton from './SmartButton';
 import '../App.css';
 
 const backendApiIdeasUrl = 'https://recetis-backend.herokuapp.com/api/ideas';
+//const backendApiIdeasUrl = 'http://localhost:4200/api/ideas';
+const backendApiRecipesUrl = 'https://recetis-backend.herokuapp.com/api/recipes';
+//const backendApiRecipesUrl = 'http://localhost:4200/api/recipes';
 
 function App() {
 	const [ideas, setIdeas] = useState([]);
+	const [recipes, setRecipes] = useState([]);
 
-	const addNewIdea = (e) => {
-		e.preventDefault(); // TODO check this
+	const addNewIdea = () => {
+		const data = { name: document.getElementById('newIdeaText').value }; // TODO leer de variable
 
-		const url = backendApiIdeasUrl;
-		const data = { name: document.getElementById('newIdeaText').value };
-
-		fetch(url, {
+		fetch(backendApiIdeasUrl, {
 			method: 'POST',
 			body: JSON.stringify(data),
 			headers:{
 				'Content-Type': 'application/json'
-			}
-		}).then(res => res.json())
-			.catch(error => console.error('Error: ', error))
-			.then(response => console.log('Success: ', response));
+				}
+			})
+			.then((response) => response.json()
+			.then((ideas) => {
+				setIdeas(ideas);
+			}));
+	}
+
+	const updateRecipes = () => {
+		fetch(backendApiRecipesUrl)
+			.then((response) => response.json()
+			.then((recipes) => {
+				setRecipes(recipes);
+			}));
 	}
 
 	useEffect(() => {
 		fetch(backendApiIdeasUrl)
 			.then((response) => response.json()
 			.then((ideas) => {
-				console.log('ideas: ', ideas);
-
 				setIdeas(ideas);
 			}));
 	}, []);
 
 	return (
 		<div>
-            <Banner
-                imageName='egg.png'
-                text='Recetis para tod@s'/>
+            <Banner imageName='egg.png' text='Recetis para tod@s'/>
 
 			{/*Container (all app content except banner)*/}
 			<div className='container'>
+				<div className='recipe-list-box'>
+					<p><b>Listado de Recetas</b></p>
+					<ListRecipes items={recipes}/>
+					<button onClick={updateRecipes}>Actualizar recetas</button>
+				</div>
 
-				<span>Lista de ideas (Componente ListItems.js)</span>
+				<AddRecipeForm />
 
-				<ListItems items={ideas}/>
+				<div className='work-in-progress-container'>
+					<b>Listado de ideas</b>
+					<ListItems items={ideas}/>
+					<input id='newIdeaText' type='text' />
+					<SmartButton handleClick={addNewIdea} visualName='+'/>
+				</div>
+
 			</div>
-
-			<input id='newIdeaText' type='text' />
-			<SmartButton handleClick={addNewIdea} visualName='+'/>
-
 		</div>
 	);
 }
