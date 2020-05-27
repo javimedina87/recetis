@@ -11,7 +11,7 @@ function App() {
 		e.preventDefault(); // TODO check this
 
 		const url = 'http://localhost:4200/api/ideas';
-		const data = { name: 'idea desde front' };
+		const data = { name: document.getElementById('newIdeaText').value };
 
 		fetch(url, {
 			method: 'POST',
@@ -48,10 +48,8 @@ function App() {
 				<ListItems items={ideas}/>
 			</div>
 
+			<input id='newIdeaText' type='text' />
 			<SmartButton handleClick={addNewIdea} visualName='+'/>
-
-			{/*<input type="text" name="newidea" value="" />*/}
-			{/*<button>Añadir idea</button>*/}
 
 		</div>
 	);
