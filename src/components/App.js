@@ -4,13 +4,15 @@ import ListItems from './ListItems';
 import SmartButton from './SmartButton';
 import '../App.css';
 
+const backendApiIdeasUrl = 'https://recetis-backend.herokuapp.com/api/ideas';
+
 function App() {
 	const [ideas, setIdeas] = useState([]);
 
 	const addNewIdea = (e) => {
 		e.preventDefault(); // TODO check this
 
-		const url = 'http://localhost:4200/api/ideas';
+		const url = backendApiIdeasUrl;
 		const data = { name: document.getElementById('newIdeaText').value };
 
 		fetch(url, {
@@ -25,7 +27,7 @@ function App() {
 	}
 
 	useEffect(() => {
-		fetch('http://localhost:4200/api/ideas')
+		fetch(backendApiIdeasUrl)
 			.then((response) => response.json()
 			.then((ideas) => {
 				console.log('ideas: ', ideas);
