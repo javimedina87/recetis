@@ -43,7 +43,7 @@ function App() {
 
       {/*Container (all app content except banner)*/}
       <div className="container">
-        <span>Lista de ideas (Componente ListItems.js)</span>
+        <span>Lista de ideas: ideas (Componente ListItems.js)</span>
 
         <ListItems items={ideas} />
       </div>
