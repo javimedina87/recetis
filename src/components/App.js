@@ -47,8 +47,6 @@ function App() {
 		<div>
             <Banner imageName='egg.png' text='Recetis para tod@s'/>
 
-			constant: {Constants.backendApiIdeasUrl}
-
 			{/*Container (all app content except banner)*/}
 			<div className='container'>
 				<AddRecipeForm />
