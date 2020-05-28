@@ -5,11 +5,7 @@ import ListItems from './ListItems';
 import ListRecipes from './ListRecipes';
 import SmartButton from './SmartButton';
 import '../App.css';
-
-const backendApiIdeasUrl = 'https://recetis-backend.herokuapp.com/api/ideas';
-//const backendApiIdeasUrl = 'http://localhost:4200/api/ideas';
-const backendApiRecipesUrl = 'https://recetis-backend.herokuapp.com/api/recipes';
-//const backendApiRecipesUrl = 'http://localhost:4200/api/recipes';
+import { Constants } from "../Constants";
 
 function App() {
 	const [ideas, setIdeas] = useState([]);
@@ -18,7 +14,7 @@ function App() {
 	const addNewIdea = () => {
 		const data = { name: document.getElementById('newIdeaText').value }; // TODO leer de variable
 
-		fetch(backendApiIdeasUrl, {
+		fetch(Constants.backendApiIdeasUrl, {
 			method: 'POST',
 			body: JSON.stringify(data),
 			headers:{
@@ -32,7 +28,7 @@ function App() {
 	}
 
 	const updateRecipes = () => {
-		fetch(backendApiRecipesUrl)
+		fetch(Constants.backendApiRecipesUrl)
 			.then((response) => response.json()
 			.then((recipes) => {
 				setRecipes(recipes);
@@ -40,7 +36,7 @@ function App() {
 	}
 
 	useEffect(() => {
-		fetch(backendApiIdeasUrl)
+		fetch(Constants.backendApiIdeasUrl)
 			.then((response) => response.json()
 			.then((ideas) => {
 				setIdeas(ideas);
@@ -50,6 +46,8 @@ function App() {
 	return (
 		<div>
             <Banner imageName='egg.png' text='Recetis para tod@s'/>
+
+			constant: {Constants.backendApiIdeasUrl}
 
 			{/*Container (all app content except banner)*/}
 			<div className='container'>

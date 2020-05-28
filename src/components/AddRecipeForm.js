@@ -1,8 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { useForm } from 'react-hook-form';
-
-const backendApiRecipesUrl = 'https://recetis-backend.herokuapp.com/api/recipes';
-// const backendApiRecipesUrl = 'http://localhost:4200/api/recipes';
+import { Constants } from "../Constants";
 
 const AddRecipeForm = () => {
 	const { register, errors, handleSubmit } = useForm();
@@ -30,7 +28,7 @@ const AddRecipeForm = () => {
 	}
 
 	const addNewRecipe = () => {
-		fetch(backendApiRecipesUrl, {
+		fetch(Constants.backendApiRecipesUrl, {
 			method: 'POST',
 			body: JSON.stringify(formData),
 			headers:{
