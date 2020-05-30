@@ -14,7 +14,7 @@ function App() {
 	const addNewIdea = () => {
 		const data = { name: document.getElementById('newIdeaText').value }; // TODO leer de variable
 
-		fetch(Constants.backendApiIdeasUrl, {
+		fetch(`${Constants.apiUrl}/ideas`, {
 			method: 'POST',
 			body: JSON.stringify(data),
 			headers:{
@@ -28,7 +28,7 @@ function App() {
 	}
 
 	const updateRecipes = () => {
-		fetch(Constants.backendApiRecipesUrl)
+		fetch(`${Constants.apiUrl}/recipes`)
 			.then((response) => response.json()
 			.then((recipes) => {
 				setRecipes(recipes);
@@ -36,7 +36,7 @@ function App() {
 	}
 
 	useEffect(() => {
-		fetch(Constants.backendApiIdeasUrl)
+		fetch(`${Constants.apiUrl}/ideas`)
 			.then((response) => response.json()
 			.then((ideas) => {
 				setIdeas(ideas);
@@ -47,8 +47,9 @@ function App() {
 		<div>
             <Banner imageName='egg.png' text='Recetis para tod@s'/>
 
-            <p>process.env.PUBLIC_URL {process.env.PUBLIC_URL}</p>
+			<p>process.env.REACT_APP_BACKEND_API_URL {process.env.REACT_APP_BACKEND_API_URL}</p>
 
+            <p>process.env.PUBLIC_URL {process.env.PUBLIC_URL}</p>
 			<p>process.env.NODE_ENV: {process.env.NODE_ENV}</p>
 			<p>process.env.REACT_APP_SECRET_CODE: {process.env.REACT_APP_SECRET_CODE}</p>
 			<p>process.env.REACT_APP_PORT: {process.env.REACT_APP_PORT}</p>

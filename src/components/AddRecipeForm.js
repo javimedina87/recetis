@@ -28,7 +28,7 @@ const AddRecipeForm = () => {
 	}
 
 	const addNewRecipe = () => {
-		fetch(Constants.backendApiRecipesUrl, {
+		fetch(`${Constants.apiUrl}/recipes`, {
 			method: 'POST',
 			body: JSON.stringify(formData),
 			headers:{
