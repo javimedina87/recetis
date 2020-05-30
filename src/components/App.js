@@ -47,6 +47,13 @@ function App() {
 		<div>
             <Banner imageName='egg.png' text='Recetis para tod@s'/>
 
+            <p>process.env.PUBLIC_URL {process.env.PUBLIC_URL}</p>
+
+			<p>process.env.NODE_ENV: {process.env.NODE_ENV}</p>
+			<p>process.env.REACT_APP_SECRET_CODE: {process.env.REACT_APP_SECRET_CODE}</p>
+			<p>process.env.REACT_APP_PORT: {process.env.REACT_APP_PORT}</p>
+			<p>REACT_APP_ENV: {process.env.REACT_APP_ENV}</p>
+
 			{/*Container (all app content except banner)*/}
 			<div className='container'>
 				<AddRecipeForm />
