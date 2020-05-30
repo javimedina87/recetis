@@ -8,13 +8,13 @@ import '../App.css';
 import { Constants } from "../Constants";
 
 function App() {
-	const [ideas, setIdeas] = useState([]);
+	const [todos, setTodos] = useState([]);
 	const [recipes, setRecipes] = useState([]);
 
-	const addNewIdea = () => {
-		const data = { name: document.getElementById('newIdeaText').value }; // TODO leer de variable
+	const addNewTodo = () => {
+		const data = { name: document.getElementById('newTodoText').value }; // TODO leer de variable
 
-		fetch(`${Constants.apiUrl}/ideas`, {
+		fetch(`${Constants.apiUrl}/todos`, {
 			method: 'POST',
 			body: JSON.stringify(data),
 			headers:{
@@ -22,8 +22,8 @@ function App() {
 				}
 			})
 			.then((response) => response.json()
-			.then((ideas) => {
-				setIdeas(ideas);
+			.then((todos) => {
+				setTodos(todos);
 			}));
 	}
 
@@ -36,24 +36,16 @@ function App() {
 	}
 
 	useEffect(() => {
-		fetch(`${Constants.apiUrl}/ideas`)
+		fetch(`${Constants.apiUrl}/todos`)
 			.then((response) => response.json()
-			.then((ideas) => {
-				setIdeas(ideas);
+			.then((todos) => {
+				setTodos(todos);
 			}));
 	}, []);
 
 	return (
 		<div>
             <Banner imageName='egg.png' text='Recetis para tod@s'/>
-
-			<p>process.env.REACT_APP_BACKEND_API_URL {process.env.REACT_APP_BACKEND_API_URL}</p>
-
-            <p>process.env.PUBLIC_URL {process.env.PUBLIC_URL}</p>
-			<p>process.env.NODE_ENV: {process.env.NODE_ENV}</p>
-			<p>process.env.REACT_APP_SECRET_CODE: {process.env.REACT_APP_SECRET_CODE}</p>
-			<p>process.env.REACT_APP_PORT: {process.env.REACT_APP_PORT}</p>
-			<p>REACT_APP_ENV: {process.env.REACT_APP_ENV}</p>
 
 			{/*Container (all app content except banner)*/}
 			<div className='container'>
@@ -66,10 +58,10 @@ function App() {
 				</div>
 
 				<div className='work-in-progress-container'>
-					<b>Listado de ideas</b>
-					<ListItems items={ideas}/>
-					<input id='newIdeaText' type='text' />
-					<SmartButton handleClick={addNewIdea} visualName='+'/>
+					<b>Listado de To-Do's</b>
+					<ListItems items={todos}/>
+					<input id='newTodoText' type='text' />
+					<SmartButton handleClick={addNewTodo} visualName='+'/>
 				</div>
 
 			</div>
