@@ -5,11 +5,21 @@ import ListItems from './ListItems';
 import ListRecipes from './ListRecipes';
 import SmartButton from './SmartButton';
 import '../App.css';
-import { Constants } from "../Constants";
+import { Constants } from '../Constants';
+
+const logoIcon = `192/${Constants.logoIcon[Math.floor(Math.random() * Constants.logoIcon.length)]}`;
 
 function App() {
 	const [todos, setTodos] = useState([]);
 	const [recipes, setRecipes] = useState([]);
+
+	useEffect(() => {
+		fetch(`${Constants.apiUrl}/todos`)
+			.then((response) => response.json()
+				.then((todos) => {
+					setTodos(todos);
+				}));
+	}, []);
 
 	const addNewTodo = () => {
 		const data = { name: document.getElementById('newTodoText').value }; // TODO leer de variable
@@ -35,17 +45,9 @@ function App() {
 			}));
 	}
 
-	useEffect(() => {
-		fetch(`${Constants.apiUrl}/todos`)
-			.then((response) => response.json()
-			.then((todos) => {
-				setTodos(todos);
-			}));
-	}, []);
-
 	return (
 		<div>
-            <Banner imageName='192/garlic-192.png' text='Recetis para tod@s'/>
+            <Banner imageName={logoIcon} text='Recetis para tod@s'/>
 
 			{/*Container (all app content except banner)*/}
 			<div className='container'>
