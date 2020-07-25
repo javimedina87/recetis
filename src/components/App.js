@@ -45,7 +45,7 @@ function App() {
 
 	return (
 		<div>
-            <Banner imageName='egg.png' text='Recetis para tod@s'/>
+            <Banner imageName='192/garlic-192.png' text='Recetis para tod@s'/>
 
 			{/*Container (all app content except banner)*/}
 			<div className='container'>

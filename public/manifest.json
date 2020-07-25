@@ -1,5 +1,5 @@
 {
-  "background_color": "yellow",
+  "background_color": "orange",
   "display": "standalone",
   "icons": [
     {
@@ -8,18 +8,13 @@
       "type": "image/x-icon"
     },
     {
-      "src": "egg192.png",
+      "src": "192/egg-192.png",
       "type": "image/png",
       "sizes": "192x192"
-    },
-    {
-      "src": "egg512.png",
-      "type": "image/png",
-      "sizes": "512x512"
     }
   ],
   "name": "Recetis para tod@s",
   "short_name": "Recetis",
   "start_url": ".index",
-  "theme_color": "blue"
+  "theme_color": "pink"
 }

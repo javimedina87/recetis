@@ -41,8 +41,8 @@ body {
   padding: var(--1vh-1vw);
 }
 
-/* Egg logo */
-.egg {
+/* App icon logo */
+.app-icon-logo {
   align-self: center; /* Avoid to expand image */
   margin-right: var(--1vh-1vw);
   width: calc(14vw);
