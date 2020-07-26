@@ -1,13 +1,19 @@
-:root {
-  --main-blue-color: lightskyblue;
-  --main-font-size: 4vmin;
-  --1vh-1vw: calc(1vh + 1vw); /* height and width. For responsive design, do no use Pixels */
+a {
+  color: var(--main-font-color);
+  text-decoration: none;
 }
 
 input[type='text'],
 input[type='number'],
 textarea {
   font-size: 16px;
+}
+
+:root {
+  --main-blue-color: lightskyblue;
+  --main-font-color: white;
+  --main-font-size: 4vmin;
+  --1vh-1vw: calc(1vh + 1vw); /* height and width. For responsive design, do no use Pixels */
 }
 
 .banner {
@@ -52,6 +58,25 @@ body {
   border: 3px dashed coral;
   margin-top: 4vmin;
   padding: 2vmin;
+}
+
+/* Menu component */
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.menu-container .menu-element{
+  align-items: center;
+  background: deepskyblue;
+  border: 1vmin dotted white;
+  display: flex;
+  font-size: 6vmin;
+  justify-content: center;
+  margin: 1vmin;
+  padding: 5vmin;
+  text-align: center;
 }
 
 .recipe-list-box {
