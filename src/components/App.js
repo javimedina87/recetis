@@ -60,7 +60,7 @@ function App() {
 				{/*Container (all app content)*/}
 				<div className='container'>
 
-					{/* Menu component */}
+					{/* Menu link component */}
 					<Menu />
 
 					<Switch>
@@ -68,11 +68,9 @@ function App() {
 							path='/add-recipe'
 							component={AddRecipeForm}>
 						</Route>
-						<Route path='/recipes-list'>
-							<div className='recipe-list-box'>
-								<ListRecipes items={recipes}/>
-								<button onClick={updateRecipes}>Actualizar recetas</button>
-							</div>
+						<Route path='/recipes-list'
+							   component={ListRecipes}>
+								{/*<button onClick={updateRecipes}>Actualizar recetas</button>*/}
 						</Route>
 						<Route path='/todo-list'>
 							<div className='work-in-progress-container'>
