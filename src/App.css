@@ -123,9 +123,19 @@ button, input {
   padding: 2vmin;
 }
 
-button {
+.default-button {
   background: cornflowerblue;
   border: 1vmin solid royalblue;
+}
+
+.add-button {
+  background: #87c973;
+  border: 1vmin solid #029202;
+}
+
+.delete-button {
+  background: #f36464;
+  border: 1vmin solid #c90202;
 }
 
 /* Rotation degrees */
