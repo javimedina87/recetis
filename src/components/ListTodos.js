@@ -3,6 +3,8 @@ import { Constants } from '../Constants';
 import ListItems from './ListItems';
 import SmartButton from './SmartButton';
 
+// TODO currently not used!
+
 const ListTodos = () => {
 	const [todos, setTodos] = useState([]);
 

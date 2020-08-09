@@ -72,6 +72,7 @@ body {
   background: deepskyblue;
   border: 1vmin dotted white;
   display: flex;
+  flex: 1;
   font-size: 6vmin;
   justify-content: center;
   margin: 1vmin;

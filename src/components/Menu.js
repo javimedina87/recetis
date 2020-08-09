@@ -11,9 +11,6 @@ const Menu = () => {
 			<div className='menu-element'>
 				<Link to='/recipes-list'>Listado de recetas</Link>
 			</div>
-			<div className='menu-element'>
-				<Link to='/todo-list'>Listado de To-Do's</Link>
-			</div>
 		</div>
 	)
 }

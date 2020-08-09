@@ -8,7 +8,6 @@ import {
 import '../App.css';
 import AddRecipeForm from './AddRecipeForm';
 import Banner from './Banner';
-import ListTodos from './ListTodos';
 import Menu from './Menu';
 import RecipesScreen from './RecipesScreen';
 
@@ -37,10 +36,6 @@ function App() {
 						<Route
 							path='/recipes-list'
 					   		component={RecipesScreen}>
-						</Route>
-						<Route
-							path='/todo-list'
-							component={ListTodos}>
 						</Route>
 					</Switch>
 
