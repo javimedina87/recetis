@@ -4,12 +4,14 @@ import {
 	Route,
 	Switch
 } from 'react-router-dom';
+
 import '../App.css';
 import AddRecipeForm from './AddRecipeForm';
 import Banner from './Banner';
-import ListRecipes from './ListRecipes';
 import ListTodos from './ListTodos';
 import Menu from './Menu';
+import RecipesScreen from './RecipesScreen';
+
 import { Constants } from '../Constants';
 
 const logoIcon = `192/${Constants.logoIcon[Math.floor(Math.random() * Constants.logoIcon.length)]}`;
@@ -34,7 +36,7 @@ function App() {
 						</Route>
 						<Route
 							path='/recipes-list'
-					   		component={ListRecipes}>
+					   		component={RecipesScreen}>
 						</Route>
 						<Route
 							path='/todo-list'

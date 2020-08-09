@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { Constants } from '../Constants';
+import React from 'react';
 import SmartButton from './SmartButton';
+import { Constants } from '../Constants';
 
-const ListRecipes = () => {
-	const [recipes, setRecipes] = useState([]);
+const ListRecipes = (props) => {
+	const {
+		list: recipes ,
+		onDeleteRecipe
+	} = props;
 
-	// Get recipes on component load
-	useEffect(() => {
-		fetch(`${Constants.apiUrl}/recipes`)
-			.then((response) => response.json()
-			.then((recipes) => {
-				setRecipes(recipes);
-			}));
-	}, []);
+	const handleOnDeleteRecipe = async (recipeSelected) => {
+		await removeRecipe(recipeSelected);
+
+		const newRecipeList = recipes.filter((recipe) => recipe._id !== recipeSelected._id);
+
+		onDeleteRecipe(newRecipeList);
+	};
 
 	const removeRecipe = (recipeSelected) => {
 		fetch(`${Constants.apiUrl}/recipes`, {
@@ -22,26 +24,21 @@ const ListRecipes = () => {
 				'Content-Type': 'application/json'
 			}
 		})
-			.then((response) => response.json()
-			.then(() => {
-				const newRecipeList = recipes.filter((recipe) => recipe._id !== recipeSelected._id);
-
-				setRecipes(newRecipeList);
-			}));
+		.then((response) => response.json());
 	}
 
 	return recipes.map((item, index) => {
 		return (
-			<div className='recipe-list-box'>
-				<div className='recipe-list' key={index}>
+			<div className='recipe-list-box' key={index}>
+				<div className='recipe-list'>
 					<b>{item.name}</b>
 					<span>Ingredientes: {item.ingredients}</span>
-					<span>Enlace: <a href={item.link} target='_blank'>{item.link}</a></span>
+					<span>Enlace: <a href={item.link} target='_blank' rel="noopener noreferrer">{item.link}</a></span>
 				</div>
 				<SmartButton
 					classNames={'delete-button'}
 					visualName='Borrar receta'
-					handleClick={() => removeRecipe(item)} />
+					handleClick={() => handleOnDeleteRecipe(item)} />
 			</div>
 		)
 	})
